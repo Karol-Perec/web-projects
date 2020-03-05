@@ -1,0 +1,39 @@
+td {
+    border: 1px black solid;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+button {
+    width: 90px;
+    height: 40px;
+    margin: 5px;
+}
+
+@keyframes coloursYayy {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    75% {
+        background-color: green;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    background-color: red;
+    animation-name: coloursYayy;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}

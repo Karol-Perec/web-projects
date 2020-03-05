@@ -1,0 +1,15 @@
+<h2>Szczegóły warsztatu</h2>
+
+<div *ngIf="workshop">
+  <h3 class="listed-item">{{ workshop.name }}</h3>
+  <span class="listed-item">{{ workshop.price | currency }}</span>
+  <span class="listed-item">{{ workshop.description }}</span>
+  <span *ngIf="this.workshopsService.existsInUserWorkshops(workshop); then thenBlock; else elseBlock"></span>
+  <ng-template #thenBlock>
+    <button (click)="removeFromUserWorkshops(workshop)">Wypisz się z kursu</button>
+  </ng-template>
+  <ng-template #elseBlock>
+    <button (click)="addToUserWorkshops(workshop)">Zapisz się na kurs</button>
+  </ng-template>
+
+</div>

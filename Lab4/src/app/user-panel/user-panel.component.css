@@ -1,0 +1,6 @@
+button {
+  margin: 13px !important;
+  width: 200px;
+  flex-direction: row;
+  justify-content: center;
+}

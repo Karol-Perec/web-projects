@@ -1,0 +1,33 @@
+input, select {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+  width: 250px;
+}
+
+input.ng-invalid, select.ng-invalid {
+  border-color: #f66 !important;
+}
+
+input.ng-valid, select.ng-valid {
+  border-color: limegreen;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.passwordWarning {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+

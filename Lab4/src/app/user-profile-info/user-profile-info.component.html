@@ -1,0 +1,21 @@
+<h2>Dane użytkownika</h2>
+<div *ngIf="userData">
+  <div class="listed-item">
+    <span>Imię:</span> <span>{{userData['name']}}</span>
+  </div>
+  <div class="listed-item">
+    <span>Nazwisko:</span> <span>{{userData['surname']}}</span>
+  </div>
+  <div class="listed-item">
+    <span>Branża:</span> <span>{{userData['business']}}</span>
+  </div>
+  <div class="listed-item">
+    <span>Email:</span> <span>{{userData['email']}}</span>
+  </div>
+  <div class="listed-item">
+    <span>Hasło:</span> <span>{{userData['passwords']['password']}}</span>
+  </div>
+</div>
+<div *ngIf="!userData">
+  <h2>Zarejestruj się!</h2>
+</div>

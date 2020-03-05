@@ -1,0 +1,165 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: 950px;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+main {
+    width: 100vw;
+    max-width: 950px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header__logo {
+    width: 80px;
+    float: left;
+}
+
+.header__title {
+    margin-left: 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.navigation-bar {
+    margin-bottom: 10px;
+    width: 100vw;
+}
+
+.navigation-bar__list {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding-left: 0px;
+    border: 1px black solid;
+}
+
+.navigation-bar__nav-option {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    font-size: 150%;
+}
+
+.news-top, .news-other {
+    width: 48%;
+    margin-bottom: 15px;
+    height: 100%;
+    display: inline-grid;
+}
+
+.news-top__title {
+    background-image: url("images/artykul-img.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    width: 99%;
+    color: white;
+    padding-left: 1%;
+    text-shadow: black 2px 2px;
+}
+
+.news-top__text {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.news-other {
+    float: right;
+}
+
+.news-other__list {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.news-other__title {
+    text-shadow: gray 1px 1px;
+    margin-bottom: 5px;
+}
+
+.news-other__option {
+    border-top: black 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.weather {
+    width: 100vw;
+    max-width: 950px;
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+
+.weather__today {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather__image {
+    display: inline-flex;
+    flex-grow: 1;
+    float: left;
+}
+
+.weather__list {
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding-left: 0px;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    float: right;
+}
+
+.weather__day {
+    margin-right: 30px;
+    width: 10%;
+    text-align: center;
+}
+
+
+
+.footer {
+    border-top: 1px solid black;
+    width: 100%;
+    max-width: 950px;
+}
+
+.footer__list {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 10px;
+}
+
+.footer__list-option {
+    display: inline-block;
+    text-align: left;
+    margin-right: 5%;
+}

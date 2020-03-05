@@ -1,0 +1,9 @@
+<label>
+  <input type="text" placeholder="search"
+         [(ngModel)]="searchTerm"  (ngModelChange)="this.search(searchTerm)">
+</label>
+<div *ngIf="results">
+  <div *ngFor="let result of results | async">
+    <span (click)="routeToArticle(result)">{{result.term}}</span>
+  </div>
+</div>

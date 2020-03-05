@@ -1,0 +1,6 @@
+<h2>Warsztaty</h2>
+
+<div class="listed-item" *ngFor="let workshop of workshops | async; index as workshopId">
+  <span>{{ workshop.name }}</span>
+  <button [routerLink]="['/workshops', workshopId]">Zobacz</button>
+</div>

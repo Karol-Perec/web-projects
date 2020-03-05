@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 6</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<main>
+    <h1 class="header">Github API users search</h1>
+    <form action="/search">
+        <input type="text" placeholder="Username" name="searchTerm" required>
+        <button type="submit">Search</button>
+    </form>
+    <% if (data && data=='init') { %>
+    <% } else if (error) { %>
+        <h1 class="error"><%= error %></h1>
+    <% } else if(!data && data.total_count == 0) { %>
+        <h1 class="error">No users found</h1>
+    <% } else { %>
+        <% for (let i = 0; i < data.items.length; i++) { %>
+            <div class="user">
+                <div>
+                    <img class="user__avatar" src="<%= data.items[i].avatar_url %>">
+                    <div class="user__main-info">
+                        <h2 class="user__login">Login: <%= data.items[i].login %></h2>
+                        <h5 class="user__url">Url: <a href="<%= data.items[i].url %>"><%= data.items[i].url %></a></h5>
+                        <h5 class="user__score">Score: <%= data.items[i].score %></h5>
+                    </div>
+                </div>
+                <div class="user__other-info">
+                    <p>Id: <%= data.items[i].id %></p>
+                    <p>Node Id: <%= data.items[i].node_id %></p>
+                    <p>Html Url: <a
+                                href="<%= data.items[i].html_url %>"><%= data.items[i].html_url %></a></p>
+                    <p>Followers Url: <a
+                                href="<%= data.items[i].followers_url %>"><%= data.items[i].followers_url %></a></p>
+                    <p>Following Url: <%= data.items[i].following_url %></p>
+                    <p>Gists Url: <%= data.items[i].gists_url %></p>
+                    <p>Starred Url: <%= data.items[i].starred_url %></p>
+                    <p>Subscriptions Url: <a
+                                href="<%= data.items[i].subscriptions_url %>"><%= data.items[i].subscriptions_url %></a>
+                    </p>
+                    <p>Organizations Url: <a
+                                href="<%= data.items[i].organizations_url %>"><%= data.items[i].organizations_url %></a>
+                    </p>
+                    <p>Repos Url: <a href="<%= data.items[i].repos_url %>"><%= data.items[i].repos_url %></a></p>
+                    <p>Events Url: <%= data.items[i].events_url %></p>
+                    <p>Received Events Url: <a
+                                href="<%= data.items[i].received_events_url %>"><%= data.items[i].received_events_url %></a>
+                    </p>
+                    <p>Type: <%= data.items[i].type %></p>
+                    <p>Site Admin: <%= data.items[i].site_admin %></p>
+                </div>
+            </div>
+    <% } } %>
+</main>
+</body>
+</html>

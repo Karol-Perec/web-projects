@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Warsztaty #1",
+    "price": 250,
+    "description": "Opis",
+    "freeSeats": 10
+  },
+  {
+    "name": "Warsztaty #2",
+    "price": 100,
+    "description": "Opis 2",
+    "freeSeats": 20
+  },
+  {
+    "name": "Warsztaty #3",
+    "price": 200,
+    "description": "Opis 3",
+    "freeSeats": 10
+  },
+  {
+    "name": "Warsztaty #4",
+    "price": 300,
+    "description": "Opis 4",
+    "freeSeats": 15
+  },
+  {
+    "name": "Warsztaty #5",
+    "price": 100,
+    "description": "Opis 5",
+    "freeSeats": 30
+  }
+]

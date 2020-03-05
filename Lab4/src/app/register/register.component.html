@@ -1,0 +1,49 @@
+<h2>Rejestracja</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+  <label for="name">
+    Imię
+  </label>
+  <input id="name" type="text" formControlName="name" required>
+
+  <label for="surname">
+    Nazwisko
+  </label>
+  <input id="surname" type="text" formControlName="surname" required>
+
+  <label for="business">
+    Branża
+  </label>
+  <select id="business" formControlName="business" required>
+    <option *ngFor="let businessArea of businessAreas"
+            [value]=businessArea>
+      {{businessArea}}
+    </option>
+  </select>
+
+  <label for="email">
+    Email
+  </label>
+  <input id="email" type="email" formControlName="email" required>
+
+  <div formGroupName="passwords">
+    <label for="password">
+      Hasło
+    </label>
+    <input id="password" type="password" formControlName="password" required
+           [ngClass]="shouldShowPasswordWarning() ? 'ng-invalid' : ''">
+
+    <label for="passwordCheck">
+      Powtórz hasło
+    </label>
+    <input id="passwordCheck" type="password" formControlName="passwordCheck" required
+           [ngClass]="shouldShowPasswordWarning() ? 'ng-invalid' : ''">
+    <span *ngIf="shouldShowPasswordWarning()"
+          class="passwordWarning">
+      Podane hasła się różnią</span>
+  </div>
+
+  <button class="button" type="submit" [disabled]="!registerForm.valid">
+    Zarejestruj się
+  </button>
+</form>

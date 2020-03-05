@@ -1,0 +1,8 @@
+<h2>Podsumowanie</h2>
+
+<div class="listed-item" *ngFor="let userWorkshop of userWorkshops">
+  <span>{{ userWorkshop.name }}</span>
+</div>
+<div *ngIf="userWorkshops" class="listed-item">
+    <span>Cena do zapłaty:</span> <span>{{ getPrice() | currency }}</span>
+</div>
